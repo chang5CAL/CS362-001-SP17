@@ -1,0 +1,93 @@
+* Starting client
+* Connecting to master process on port 18763
+* Analyzing classpath: 
+  - C:/CS362/Assign1/target/classes
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\deploy.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\access-bridge-64.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\cldrdata.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\dnsns.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\jaccess.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\jfxrt.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\localedata.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\nashorn.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunec.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunjce_provider.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunmscapi.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunpkcs11.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\zipfs.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\javaws.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfxswt.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\management-agent.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\plugin.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar
+  - C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar
+  - C:\CS362\Assign1\target\classes
+* Finished analyzing classpath
+* Generating tests for class GenQueueTest
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+* Total number of test goals: 
+  - Line 12
+  - Branch 3
+  - Exception 0
+  - MutationFactory 16
+  - Output 0
+  - Method 2
+  - MethodNoException 2
+  - CBranchFitnessFactory 3
+* Using seed 1492433078853
+* Starting evolution
+* Search finished after 96s and 2429 generations, 249248 statements, best individual has fitness: 6.166666666666666
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 83%
+* Total number of goals: 12
+* Number of covered goals: 10
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 67%
+* Total number of goals: 3
+* Number of covered goals: 2
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 1
+* Number of covered goals: 1
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 94%
+* Total number of goals: 16
+* Number of covered goals: 15
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100% (no goals)
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 50%
+* Total number of goals: 2
+* Number of covered goals: 1
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 67%
+* Total number of goals: 3
+* Number of covered goals: 2
+* Generated 2 tests with total length 2
+* Resulting test suite's coverage: 76% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 0%
+* Compiling and checking tests
+* Writing JUnit test case 'GenQueueTest_ESTest' to C:\CS362\Assign1\.evosuite\tmp_2017_04_17_05_44_35\tests
+* Done!
+
