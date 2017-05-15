@@ -53,21 +53,21 @@ public class TimeTableTest {
 			title);
 	LinkedList<Appt> lla = new LinkedList<Appt>();
 
-	 @Test(expected = IllegalArgumentException.class)
-	  public void test01()  throws Throwable  {
-		 GregorianCalendar gregCal = new GregorianCalendar();
-	 	lla.add(appt);
-	 	lla.add(appt2);
-	 	LinkedList<CalDay> l = t.getApptRange(lla,gregCal,gregCal);
-	 	//No asserts here. It should throw an error, though.
+	@Test(expected = IllegalArgumentException.class)
+	public void test01()  throws Throwable  {
+		GregorianCalendar gregCal = new GregorianCalendar(2017,1,1,5,10);
+		lla.add(appt);
+		lla.add(appt2);
+		LinkedList<CalDay> l = t.getApptRange(lla,gregCal,gregCal);
+		//No asserts here. It should throw an error, though.
 
-	 	//Line 99 is impossible to access in the current code. It's also redundant.
+		//Line 99 is impossible to access in the current code. It's also redundant.
 
-	 }
+	}
 
 	@Test
 	public void test02()  throws Throwable  {
-		GregorianCalendar gregCal = new GregorianCalendar();
+		GregorianCalendar gregCal = new GregorianCalendar(2017,1,1,5,10);
 		GregorianCalendar gregCal2 = new GregorianCalendar(2018, 1, 1, 5, 10);
 		gregCal2.getTime();
 		lla.add(appt);
@@ -102,7 +102,7 @@ public class TimeTableTest {
 
 	@Test
 	public void test05()  throws Throwable  {
-	 	LinkedList<Appt> n = null;
+		LinkedList<Appt> n = null;
 
 		n = t.deleteAppt(n,appt);
 
@@ -117,6 +117,37 @@ public class TimeTableTest {
 		lla = t.deleteAppt(lla,appt3);
 
 		assertNull(lla);
+
+	}
+
+	@Test
+	public void test07()  throws Throwable  {
+        Appt newappt = new Appt(startHour,
+                startMinute ,
+                2 ,
+                1 ,
+                2017 ,
+                title,
+                description);
+		GregorianCalendar gregCal = new GregorianCalendar(2017,1,1,5,10);
+		GregorianCalendar gregCal2 = new GregorianCalendar(2017, 1, 3, 5, 10);
+		gregCal2.getTime();
+		lla.add(appt);
+		lla.add(appt2);
+		lla.add(newappt);
+
+		LinkedList<CalDay> l = t.getApptRange(lla,gregCal,gregCal2);
+		GregorianCalendar g = new GregorianCalendar(2017,1,2);
+		CalDay c1 = new CalDay(gregCal);
+		assertEquals(c1.toString(),l.get(0).toString());
+		CalDay c = new CalDay(g);
+		c.addAppt(newappt);
+		assertEquals(c.toString(),l.get(1).toString());
+
+		assertNotNull(l);
+		System.out.print(l);
+
+		System.out.print(l.get(1));
 
 	}
 
