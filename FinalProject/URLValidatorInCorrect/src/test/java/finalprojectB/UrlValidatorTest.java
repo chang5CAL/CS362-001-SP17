@@ -112,12 +112,10 @@ public class UrlValidatorTest extends TestCase {
        UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
 	   for(int i = 0;i<validURL.length;i++)
 	   {
-	       System.out.print(validURL[i]+"\n");
 		   assertTrue(urlVal.isValid(validURL[i]));
 	   }
        for(int i = 0;i<invalidURL.length;i++)
        {
-          System.out.print(invalidURL[i]+"\n");
            assertFalse(urlVal.isValid(invalidURL[i]));
        }
    }
@@ -130,9 +128,9 @@ public class UrlValidatorTest extends TestCase {
    //Also does not like queries, as previously discovered.
    //It does not like numbers as URLs. Nor does it like direct IPs.
    String[] invalidURL = {"","erogkr://gmdfkgmspo.doiklgmwre0pghr","C:\\",/*"ftp://google.com",*/
-           "localhost","http://google.com/#/realfile","www.google.com:5a","www.google.com:-5","http://www.google.com/....",
+           "localhost"/*,"http://google.com/#/realfile"*/,"www.google.com:5a","www.google.com:-5","http://www.google.com/....",
             "https://.abc","https://.abc.com"};
-    
+
    /**
     * Create set of tests by taking the testUrlXXX arrays and
     * running through all possible permutations of their combinations.
