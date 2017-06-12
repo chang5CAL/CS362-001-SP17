@@ -294,33 +294,40 @@ public class UrlValidator implements Serializable {
 
         String scheme = urlMatcher.group(PARSE_URL_SCHEME);
         if (!isValidScheme(scheme)) {
+
+            System.out.print("Failed authority");
             return false;
         }
 
         String authority = urlMatcher.group(PARSE_URL_AUTHORITY);
         if ("file".equals(scheme) && "".equals(authority)) {
+            System.out.print("hey what's in here");
            // Special case - file: allows an empty authority
         } else {
            // Validate the authority
            if (!isValidAuthority(authority)) {
+               System.out.print("Failed authority"+"\n");
                return false;
             }
         }
 
         if (!isValidPath(urlMatcher.group(PARSE_URL_PATH))) {
+            System.out.print("Failed path");
             return false;
         }
 
         if (!isValidQuery(urlMatcher.group(PARSE_URL_QUERY))) {
+            System.out.print("Failed query");
             return false;
         }
 
         if (!isValidFragment(urlMatcher.group(PARSE_URL_FRAGMENT))) {
+            System.out.print("Failed fragment");
             
         	return false;
         	
         }
-
+        System.out.print("True");
         return true;
     }
 

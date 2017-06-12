@@ -85,7 +85,7 @@ public class UrlValidatorTest extends TestCase {
     */
    public void testIsValid(Object[] testObjects, long options) {
       UrlValidator urlVal = new UrlValidator(null, null, options);
-      assertTrue(urlVal.isValid("http://www.google.com"));
+      assertTrue(urlVal.isValid("http://1.2.3.4.5.com"));
       assertTrue(urlVal.isValid("http://www.google.com/"));
       int statusPerLine = 60;
       int printed = 0;
